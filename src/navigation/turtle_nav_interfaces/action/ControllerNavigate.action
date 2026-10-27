@@ -1,0 +1,9 @@
+# Internal goal sent by the public server to the motion controller.
+float32 x
+float32 y
+---
+float32 final_distance
+bool stop_confirmed
+string message
+---
+float32 current_distance

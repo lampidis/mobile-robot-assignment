@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>turtle_navigation</name>
+  <version>0.1.0</version>
+  <description>Action server and motion controller for Turtlesim navigation.</description>
+  <maintainer email="loukas.lampidis@gmail.com">Lampidis</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>rclcpp</depend>
+  <depend>rclcpp_action</depend>
+  <depend>geometry_msgs</depend>
+  <depend>turtlesim</depend>
+  <depend>turtle_nav_interfaces</depend>
+  <exec_depend>launch_ros</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

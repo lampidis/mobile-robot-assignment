@@ -3,7 +3,7 @@
   <name>front_camera_info</name>
   <version>0.1.0</version>
   <description>Template package for front camera information with the supplied sensor URDF.</description>
-  <maintainer email="dimitris@example.com">Dimitris</maintainer>
+  <maintainer email="loukas.lampidis@gmail.com">Lampidis</maintainer>
   <license>Apache-2.0</license>
   <buildtool_depend>ament_python</buildtool_depend>
   <export>

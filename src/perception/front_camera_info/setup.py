@@ -14,8 +14,8 @@ setup(
     ],
     install_requires=["setuptools"],
     zip_safe=True,
-    maintainer="Dimitris",
-    maintainer_email="dimitris@example.com",
+    maintainer="Lampidis",
+    maintainer_email="loukas.lampidis@gmail.com",
     description="Template package for front camera information with the supplied sensor URDF.",
     license="Apache-2.0",
 )

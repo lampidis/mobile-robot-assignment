@@ -46,6 +46,8 @@ env/
 *.engine
 *.safetensors
 /runs/
+/out/
+/models/
 
 # Local environment settings; retain shareable templates
 .env

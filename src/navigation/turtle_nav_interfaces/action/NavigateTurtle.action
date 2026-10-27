@@ -1,0 +1,8 @@
+# Public goal in Turtlesim coordinates.
+float32 x
+float32 y
+---
+float32 final_distance
+string message
+---
+float32 current_distance

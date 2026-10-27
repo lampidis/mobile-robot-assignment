@@ -12,3 +12,5 @@ log
 **/*.pt
 .venv
 .pytest_cache
+out
+models
