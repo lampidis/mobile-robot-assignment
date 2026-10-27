@@ -1,4 +1,4 @@
-"""Launch the controller and the public action server skeleton."""
+"""Launch the public navigation action server, controller, and optional Turtlesim."""
 
 from pathlib import Path
 
@@ -12,7 +12,7 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     start_turtlesim = LaunchConfiguration("start_turtlesim")
-    controller_config = str(
+    navigation_config = str(
         Path(get_package_share_directory("turtle_navigation")) / "config" / "navigation.yaml"
     )
 
@@ -33,12 +33,13 @@ def generate_launch_description():
                 package="turtle_navigation",
                 executable="navigation_action_server",
                 output="screen",
+                parameters=[navigation_config],
             ),
             Node(
                 package="turtle_navigation",
                 executable="navigation_controller",
                 output="screen",
-                parameters=[controller_config],
+                parameters=[navigation_config],
             ),
         ]
     )

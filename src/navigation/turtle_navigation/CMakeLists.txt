@@ -9,7 +9,8 @@ find_package(turtlesim REQUIRED)
 find_package(turtle_nav_interfaces REQUIRED)
 
 add_executable(navigation_action_server src/navigation_action_server.cpp)
-ament_target_dependencies(navigation_action_server rclcpp turtle_nav_interfaces)
+ament_target_dependencies(navigation_action_server rclcpp rclcpp_action turtle_nav_interfaces)
+set_target_properties(navigation_action_server PROPERTIES CXX_STANDARD 17 CXX_STANDARD_REQUIRED ON)
 
 add_executable(navigation_controller src/navigation_controller.cpp)
 ament_target_dependencies(navigation_controller
