@@ -1,0 +1,12 @@
+navigation_controller:
+  ros__parameters:
+    position_tolerance: 0.15
+    control_rate_hz: 20.0
+    linear_gain: 1.5
+    angular_gain: 4.0
+    max_linear_speed: 2.0
+    max_angular_speed: 2.5
+    heading_gate: 0.35
+    pose_timeout: 1.0
+    minimum_coordinate: 0.5
+    maximum_coordinate: 10.5
