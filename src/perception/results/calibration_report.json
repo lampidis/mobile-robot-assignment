@@ -1,0 +1,99 @@
+{
+  "rms_pixels": 0.6542441773526849,
+  "initial_focal_pixels": 407.4366543152521,
+  "initialization": "equidistant 180-degree field-of-view guess",
+  "image_size": [
+    1280,
+    720
+  ],
+  "accepted": [
+    "camera0_20261007162307.png",
+    "camera0_20261007162310.png",
+    "camera0_20261007162312.png",
+    "camera0_20261007162314.png",
+    "camera0_20261007162316.png",
+    "camera0_20261007162319.png",
+    "camera0_20261007162323.png",
+    "camera0_20261007162328.png",
+    "camera0_20261007162331.png",
+    "camera0_20261007162334.png",
+    "camera0_20261007162336.png",
+    "camera0_20261007162340.png",
+    "camera0_20261007162344.png",
+    "camera0_20261007162347.png",
+    "camera0_20261007162348.png",
+    "camera0_20261007162352.png",
+    "camera0_20261007162356.png",
+    "camera0_20261007162402.png",
+    "camera0_20261007162406.png",
+    "camera0_20261007162408.png",
+    "camera0_20261007162410.png",
+    "camera0_20261007162411.png",
+    "camera0_20261007162413.png",
+    "camera0_20261007162415.png",
+    "camera0_20261007162417.png",
+    "camera0_20261007162419.png",
+    "camera0_20261007162438.png",
+    "camera0_20261007162441.png",
+    "camera0_20261007162447.png",
+    "camera0_20261007162449.png",
+    "camera0_20261007162453.png"
+  ],
+  "rejected": {
+    "camera0_20261007162543.png": "excluded after visual/geometric review"
+  },
+  "per_image_rms_pixels": {
+    "camera0_20261007162307.png": 0.3634809843179858,
+    "camera0_20261007162310.png": 0.3567811526254043,
+    "camera0_20261007162312.png": 0.687505982422934,
+    "camera0_20261007162314.png": 0.6391031991067544,
+    "camera0_20261007162316.png": 0.43161210422931245,
+    "camera0_20261007162319.png": 0.5174364789726728,
+    "camera0_20261007162323.png": 0.8235741131561805,
+    "camera0_20261007162328.png": 0.743723638966421,
+    "camera0_20261007162331.png": 0.7859011191558913,
+    "camera0_20261007162334.png": 0.5267990236958695,
+    "camera0_20261007162336.png": 0.37459405575564697,
+    "camera0_20261007162340.png": 0.7643417772469263,
+    "camera0_20261007162344.png": 0.6612623752966029,
+    "camera0_20261007162347.png": 0.5777356623016018,
+    "camera0_20261007162348.png": 0.44383709332034943,
+    "camera0_20261007162352.png": 0.6647373290791226,
+    "camera0_20261007162356.png": 0.5029396157001875,
+    "camera0_20261007162402.png": 1.1397400555949155,
+    "camera0_20261007162406.png": 0.68187387731907,
+    "camera0_20261007162408.png": 0.5636988384295724,
+    "camera0_20261007162410.png": 0.519657958743267,
+    "camera0_20261007162411.png": 0.956788159154086,
+    "camera0_20261007162413.png": 1.0459504100361294,
+    "camera0_20261007162415.png": 1.1098088188747512,
+    "camera0_20261007162417.png": 1.0079954491210443,
+    "camera0_20261007162419.png": 0.7626257128197019,
+    "camera0_20261007162438.png": 0.2599610905436491,
+    "camera0_20261007162441.png": 0.854559600477883,
+    "camera0_20261007162447.png": 0.4127052789101684,
+    "camera0_20261007162449.png": 0.46134817894430763,
+    "camera0_20261007162453.png": 0.4071038085362426
+  },
+  "worst_images": [
+    "camera0_20261007162402.png",
+    "camera0_20261007162415.png",
+    "camera0_20261007162413.png",
+    "camera0_20261007162417.png",
+    "camera0_20261007162411.png"
+  ],
+  "visual_examples": [
+    {
+      "image": "camera0_20261007162307.png",
+      "output": "src/perception/results/calibration_corners.png"
+    },
+    {
+      "image": "camera0_20261007162352.png",
+      "output": "src/perception/results/calibration_corners_middle.png"
+    },
+    {
+      "image": "camera0_20261007162453.png",
+      "output": "src/perception/results/calibration_corners_last.png"
+    }
+  ]
+}
