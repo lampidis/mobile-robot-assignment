@@ -24,7 +24,7 @@ Visualization Manager:
     - Class: rviz_default_plugins/PointCloud2
       Name: LiDAR points
       Enabled: true
-      Alpha: 1
+      Alpha: 0.35
       Color Transformer: Intensity
       Channel Name: intensity
       Position Transformer: XYZ
@@ -32,6 +32,23 @@ Visualization Manager:
       Size (Pixels): 3
       Topic:
         Value: /LIDAR/POINTS
+        Depth: 5
+        History Policy: Keep Last
+        Reliability Policy: Best Effort
+        Durability Policy: Volatile
+    # Show only the points used for a person estimate in bright magenta.
+    - Class: rviz_default_plugins/PointCloud2
+      Name: Selected person points
+      Enabled: true
+      Alpha: 1
+      Color Transformer: FlatColor
+      Color: 255; 0; 255
+      Position Transformer: XYZ
+      Style: Spheres
+      Size (m): 0.04
+      Decay Time: 0
+      Topic:
+        Value: /human/selected_points
         Depth: 5
         History Policy: Keep Last
         Reliability Policy: Best Effort
