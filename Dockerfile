@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
     MPLBACKEND=Agg
 
 # One image for the C++ action application, perception pipeline, and RViz2.
-# Keep source, bag data, results, and model weights on runtime mounts.
+# Keep source, bag data, and results on runtime mounts.
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     cmake \
@@ -33,6 +33,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # ROS Humble's cv_bridge is built against NumPy 1.x. Install a CPU-only
 # PyTorch wheel first so the detector does not pull CUDA runtime packages.
+# Ultralytics 8.4.190 is the version tested with the YOLO26n checkpoint.
 RUN python3 -m pip install --no-cache-dir \
     'numpy==1.26.4' \
     'torch==2.2.2+cpu' \
@@ -41,7 +42,14 @@ RUN python3 -m pip install --no-cache-dir \
     && python3 -m pip install --no-cache-dir \
     'numpy==1.26.4' \
     'opencv-python==4.10.0.84' \
-    'ultralytics==8.3.220'
+    'ultralytics==8.4.190'
+
+# Download the tested checkpoint into the image so the workspace mount cannot
+# hide it and a fresh container can start the detector without network access.
+RUN mkdir -p /opt/models \
+    && cd /opt/models \
+    && YOLO_CONFIG_DIR=/tmp python3 -c 'from ultralytics import YOLO; YOLO("yolo26n.pt")' \
+    && echo '9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef  yolo26n.pt' | sha256sum -c -
 
 WORKDIR /workspace
 

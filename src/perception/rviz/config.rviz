@@ -45,6 +45,16 @@ Visualization Manager:
         History Policy: Keep Last
         Reliability Policy: Best Effort
         Durability Policy: Volatile
+    # The detector publishes this image with a person box and confidence label.
+    - Class: rviz_default_plugins/Image
+      Name: Detected people
+      Enabled: true
+      Topic:
+        Value: /m20/camera/front/human/image_annotated
+        Depth: 5
+        History Policy: Keep Last
+        Reliability Policy: Best Effort
+        Durability Policy: Volatile
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48

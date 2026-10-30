@@ -32,6 +32,8 @@ env/
 # Raw perception dataset; keep dataset documentation under version control
 /src/perception/data/*
 !/src/perception/data/README.md
+# Keep working plans local; they are not submission artifacts.
+/plans/
 *.bag
 *.db3
 *.db3-shm
