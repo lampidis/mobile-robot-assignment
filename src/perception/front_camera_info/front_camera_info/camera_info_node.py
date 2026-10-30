@@ -63,9 +63,14 @@ def main():
     node = CameraInfoNode()
     try:
         rclpy.spin(node)
+    except KeyboardInterrupt:
+        # Ctrl+C from ros2 launch is a normal shutdown for this publisher.
+        pass
     finally:
         node.destroy_node()
-        rclpy.shutdown()
+        # ROS 2 may have shut down the context already when launch sent SIGINT.
+        if rclpy.ok():
+            rclpy.shutdown()
 
 
 if __name__ == '__main__':

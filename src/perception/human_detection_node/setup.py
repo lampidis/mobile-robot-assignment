@@ -11,6 +11,8 @@ setup(
         ('share/ament_index/resource_index/packages', ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
         ('share/' + package_name + '/launch', glob('launch/*.launch.py')),
+        # Install the shared RViz preset with the package so launch can find it.
+        ('share/' + package_name + '/rviz', ['../rviz/config.rviz']),
     ],
     install_requires=['setuptools'], zip_safe=True,
     maintainer='Lampidis', maintainer_email='loukas.lampidis@gmail.com',
