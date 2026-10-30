@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
     PYTHONUNBUFFERED=1 \
     MPLBACKEND=Agg
 
-# One image for the C++ action application and Python perception pipeline.
+# One image for the C++ action application, perception pipeline, and RViz2.
 # Keep source, bag data, results, and model weights on runtime mounts.
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
@@ -21,6 +21,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ros-humble-message-filters \
     ros-humble-robot-state-publisher \
     ros-humble-rosbag2 \
+    ros-humble-rviz2 \
     ros-humble-rosidl-default-generators \
     ros-humble-sensor-msgs \
     ros-humble-tf2-geometry-msgs \

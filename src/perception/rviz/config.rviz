@@ -1,0 +1,74 @@
+# Open with: rviz2 -d /workspace/src/perception/rviz/config.rviz
+# The recorded camera and LiDAR topics publish with Best Effort reliability.
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+  - Class: rviz_common/Views
+    Name: Views
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Enabled: true
+      Cell Size: 1
+      Plane Cell Count: 20
+      Reference Frame: <Fixed Frame>
+    - Class: rviz_default_plugins/TF
+      Name: Sensor TF
+      Enabled: true
+      Show Axes: true
+      Show Arrows: true
+      Show Names: true
+      Marker Scale: 0.3
+    - Class: rviz_default_plugins/PointCloud2
+      Name: LiDAR points
+      Enabled: true
+      Alpha: 1
+      Color Transformer: Intensity
+      Channel Name: intensity
+      Position Transformer: XYZ
+      Style: Flat Squares
+      Size (Pixels): 3
+      Topic:
+        Value: /LIDAR/POINTS
+        Depth: 5
+        History Policy: Keep Last
+        Reliability Policy: Best Effort
+        Durability Policy: Volatile
+    - Class: rviz_default_plugins/Image
+      Name: Front camera
+      Enabled: true
+      Topic:
+        Value: /m20/camera/front/image_raw
+        Depth: 5
+        History Policy: Keep Last
+        Reliability Policy: Best Effort
+        Durability Policy: Volatile
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: base_link_custom
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/Interact
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Name: Current View
+      Distance: 12
+      Focal Point:
+        X: 0
+        Y: 0
+        Z: 0
+      Pitch: 0.7
+      Yaw: 0.7
+      Target Frame: <Fixed Frame>
+    Saved: ~
+Window Geometry:
+  Height: 900
+  Width: 1500
