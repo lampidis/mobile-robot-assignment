@@ -251,4 +251,6 @@ The fixed wait is a practical choice for this recording and playback rate, not a
 
 ### Remaining validation
 
-Review the full recorded output and compare location estimates with reference 3D positions to measure position error. To check the selection heuristics, hold detections and clouds fixed while varying the box crop, minimum point count, and depth thresholds. On labeled visible, obstructed, sparse, and wall-background examples, compare correct estimates, wrong-surface estimates, misses, and changes in the reported point. This would show whether the choices are stable, without reference positions, it would not establish 3D accuracy.
+- Record a full perception run, then review the saved detections, locations, and selected LiDAR points.
+- Look at examples where people are clearly visible, partly blocked, sparse in the LiDAR data, or close to a wall. Note which locations look right, which land on the wrong surface, and which people are missed.
+- Try different box crops, minimum point counts, and depth thresholds on the same detections and clouds. Check how much the reported locations change.
